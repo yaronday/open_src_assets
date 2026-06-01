@@ -51,7 +51,7 @@ Because the true micro-roots ($|\pm 10^{-10}i|$) fall well within the absolute t
 ω₄:  0.0000 - 1.0000e4j
 ω₅:  0.0000 - 100.0000j
 
-Product: 2.6615e-90 (Violates the expected Vieta ratio 1e-8)
+Product: 2.6615e-90 (Violates the expected value 1e-8)
 ```
 
 ##### Scenario 2: Optimized Precision Floor ($\epsilon_{\text{abs}} = 6.7\times10^{-11}$)
