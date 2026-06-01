@@ -36,9 +36,9 @@ When a system contains roots scaled across multiple orders of magnitude (from ma
 - **Target Test Roots**: $\pm 10^{-10}i,\ \pm 100i,\ \pm 10^{4}i$
 - **Expanded Characteristic Equation**:
 
-  $$
-  z^6 + 1.0001\times10^8z^4 + 10^{12}z^2 + 10^{-8} = 0
-  $$
+$$
+z^6 + 1.0001 \cdot 10^8 z^4 + 10^{12} z^2 + 10^{-8} = 0
+$$
 
 ##### Scenario 1: Oversized Floor ($\epsilon_{\text{abs}} = 2.6\times10^{-8},\ \epsilon_{\text{rel}} = 3.2\times10^{-3}$)
 
