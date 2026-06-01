@@ -9,9 +9,7 @@ To present clean algebraic roots to researchers, Argandly passes raw roots throu
 
 - **Mathematical Condition**: An edge is established between two discrete root approximations $z_1$ and $z_2$ if they satisfy an adaptive, non-accumulative dual-tolerance proximity condition:
 
-  $$
-  \|z_1 - z_2\| \le \max\left(\epsilon_{\text{abs}},\ \epsilon_{\text{rel}} \max\left(|z_1|,\ |z_2|\right)\right)
-  $$
+  $$\|z_1 - z_2\|\ \le \max\left(\epsilon_{\text{abs}},\ \epsilon_{\text{rel}} \max\left(|z_1|,\ |z_2|\right)\right)$$
   - **Absolute Tolerance ($\epsilon_{\text{abs}}$)**: Stabilizes micro-scale root isolation near the origin ($|z| \to 0$), acting as a hard floor against machine-epsilon noise where relative scaling vanishes.
   - **Relative Tolerance ($\epsilon_{\text{rel}}$)**: Dynamically scales to handle high-magnitude, volatile root clusters (e.g., ill-conditioned systems like the **Wilkinson Catastrophe**). This matches the proximity window proportionally to the macro-scale boundary of the roots, preventing chaotic splitting caused by floating-point coefficient roundoff.
 
@@ -20,9 +18,7 @@ To present clean algebraic roots to researchers, Argandly passes raw roots throu
 - **Online Centroid Tracking**: To maximize arithmetic accuracy and avoid late-pass iteration overhead, the cluster engine maintains running real and imaginary coordinate metrics directly during the component `unite` step.  
    Once sets are finalized, the definitive cluster coordinates are resolved directly via their true algebraic center of mass:
 
-  $$
-  z_{\text{cluster}} = \frac{\sum_{m=1}^{M} \text{Re}(\omega_m) + i \sum_{m=1}^{M} \text{Im}(\omega_m)}{M} \quad (\text{where } M = \text{set size / multiplicity})
-  $$
+  $$z_{\text{cluster}} = \frac{\sum_{m=1}^{M} \text{Re}(\omega_m) + i \sum_{m=1}^{M} \text{Im}(\omega_m)}{M} \quad (\text{where } M = \text{set size / multiplicity})$$
 
 ---
 
