@@ -1,4 +1,4 @@
-## Appendix A: Root Clustering Architecture
+## Appendix A: Root Clusterer
 
 When analyzing complex polynomials, structural challenges arise due to **numerical multiplicity clustering** and **visual flickering during coefficient mutations**. Argandly solves these issues through a specialized post-processing pipeline.
 
@@ -51,7 +51,7 @@ Because the true micro-roots ($|\pm 10^{-10}i|$) fall well within the absolute t
 ω₄:  0.0000 - 1.0000e4j
 ω₅:  0.0000 - 100.0000j
 
-Product: 2.6615e-90 (Violates the expected value 1e-8)
+Product is 2.6615e-90, which violates the expected value of 1e-8.
 ```
 
 ##### Scenario 2: Optimized Precision Floor ($\epsilon_{\text{abs}} = 6.7\times10^{-11}$)
@@ -66,7 +66,7 @@ Lowering $\epsilon_{\text{abs}}$ below the micro-root magnitude allows the algor
 ω₅:  0.0000 - 1.0000e4j
 ω₆:  0.0000 - 100.0000j
 
-Product: 1.0000e-8   (Perfect algebraic conservation)
+Product: 1.0000e-8
 ```
 
 #### Case B: Relative Tolerance ($\epsilon_{\text{rel}}$) and Macro-Scale Clustering (The $10$-th-Order Decoupling)
@@ -104,5 +104,5 @@ resolving the scattered points back into a single definitive center of mass with
 ```text
 ω₁:  1.0050 - 0.0032j (x10)     <-- Consolidated root displaying true multiplicity
 Sum: 10.0496 - 0.0324j
-Product: 1.0502 - 0.0339j (Invariants remain perfectly conserved)
+Product: 1.0502 - 0.0339j
 ```
