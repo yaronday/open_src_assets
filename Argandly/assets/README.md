@@ -11,11 +11,6 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 1. **Number Mode**: Evaluates an arbitrary complex number $z \in \mathbb{C}$ to find its $n$-th roots, mapping their symmetric distribution along an origin-centered circumscribed circle.
 2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
 
-💡 Repository Architecture Note:  
-To preserve the proprietary performance optimizations of the core numerical engines,  
-the primary application codebase is maintained in a private repository.  
-This public documentation hub serves as the architectural blueprint, asset repository, and system specification for the application.
-
 ---
 
 ## Key Features
@@ -148,7 +143,7 @@ where:
 
 ---
 
-### Appendix A: [Root Clustering Architecture](root_clusterer.md)
+### Appendix A: [Root Clusterer](root_clusterer.md)
 
 ---
 
