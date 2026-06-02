@@ -17,7 +17,7 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 ### Computational Engines
 
-- **Arbitrary Root Extraction**: Extracts up to $N = 20$ roots per complex value using automated input-aware memoization via an LRU cache to isolate execution from the UI thread.
+- **Scalable Root Extraction Engine:** Computes up to $N = 20$ roots on mobile, scaling up to $N = 100$ via compile-time desktop targets. Leverages an input-aware LRU cache to isolate execution and guarantee fluid, frame-rate-independent UI rendering.
 - **High-Degree Polynomial Solver**: Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical engine.
 - **Calculus & Algebraic Operators**:
   - **Differentiate**: Computes the symbolic first derivative $\frac{dP}{dz}$.
