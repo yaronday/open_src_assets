@@ -108,7 +108,7 @@ The settings panel provides fine-grained control over the underlying numerical e
 
 ---
 
-## Technical Architecture Deep-Dive
+## Algorithmic & Numerical Mechanics
 
 ### Mathematical Formalisms
 
