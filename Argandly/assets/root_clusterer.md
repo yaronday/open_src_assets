@@ -97,7 +97,7 @@ Product: 1.0516 - 0.0344j
 
 ##### Scenario 2: Adaptive Clustering Bound ($\epsilon_{\text{rel}} = 4.1\times10^{-2}$)
 
-Increasing the relative threshold allows the Union-Find algorithm to evaluate the local root variations  
+Increasing the relative threshold allows the UF algorithm to evaluate the local root variations  
 relative to their macro position ($\approx 1.0$). The engine dynamically expands the grouping threshold,  
 resolving the scattered points back into a single definitive center of mass with its correct multiplicity.
 

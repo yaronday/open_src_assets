@@ -88,7 +88,7 @@ The top app bar provides immediate toggles for high-frequency settings during ac
 - **Phase Units:** Switch phase output between radians and degrees (functional when Polar mode is active).
 - **Screen Capture:** Capture and save the current plot as a PNG image.
 - **Copy Results:** Copy all computed root results to the clipboard as formatted text in a single action.
-- **Theme Toggle:** Switch between light and dark visual themes via system-aware Material 3 components.
+- **Theme Toggle:** Switch between light and dark visual themes via system-aware M3 components.
 - **General Settings:** Access additional configurations via the main settings panel.
 
 ---
