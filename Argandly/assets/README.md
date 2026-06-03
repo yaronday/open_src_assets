@@ -22,7 +22,7 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 - **Calculus Operators:**
   - **Differentiate:** Computes the symbolic first derivative $\frac{dP}{dz}$.
   - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ (assuming $C = 0$).
-  - **Power:** Computes $P(z)^k$ via algebraic expansion up to the maximum degree boundary.
+  - **Power:** Computes $P^k(z)$ via algebraic expansion up to the maximum degree boundary.
 - **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots.
 
 ### UX & Visualization Pipeline
