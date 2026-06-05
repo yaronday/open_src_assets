@@ -17,12 +17,18 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 ### Computational Engines
 
-- **Scalable Root Extraction Engine:** Computes up to $N = 20$ roots on mobile, scaling up to $N = 100$ via compile-time desktop targets. Leverages an input-aware LRU cache to isolate execution and guarantee fluid, frame-rate-independent UI rendering.
+- **Scalable Root Extraction Engine:** Computes up to $N = 100$. Leverages an input-aware LRU cache to isolate execution and guarantee fluid, frame-rate-independent UI rendering.
 - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical engine.
-- **Calculus Operators:**
+- **Polynomial Operations:**
   - **Differentiate:** Computes the symbolic first derivative $\frac{dP}{dz}$.
   - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ (assuming $C = 0$).
   - **Power:** Computes $P^k(z)$ via algebraic expansion up to the maximum degree boundary.
+  - **Conjugate:** Computes $P^*(z)$, by returning the complex conjugate of all its coeffs.
+- **Coeff Operations:**
+  - **Reverse Coeffs:** Turns $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ into $P(z) = \sum_{k=0}^{n} c_k z^{k}$.
+  - **Circularly shift coeffs:** Circularly shifts coeffs left if integer $k$ < 0, otherwise right if $k$ > 0.
+- **Root Operations:**
+  - **Rotate Roots:** Rotates all roots by $k$ degrees.
 - **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots.
 
 ### UX & Visualization Pipeline
