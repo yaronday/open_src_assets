@@ -15,21 +15,24 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 ## Key Features
 
-### Computational Engines
+### Computational Engines & State Transformations
 
-- **Scalable Root Extraction Engine:** Computes up to $N = 100$. Leverages an input-aware LRU cache to isolate execution and guarantee fluid, frame-rate-independent UI rendering.
-- **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical engine.
-- **Polynomial Operations:**
-  - **Differentiate:** Computes the symbolic first derivative $\frac{dP}{dz}$.
-  - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ (assuming $C = 0$).
-  - **Power:** Computes $P^k(z)$ via algebraic expansion up to the maximum degree boundary.
-  - **Conjugate:** Computes $P^*(z)$, by returning the complex conjugate of all its coeffs.
-- **Coeff Operations:**
-  - **Reverse Coeffs:** Turns $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ into $P(z) = \sum_{k=0}^{n} c_k z^{k}$.
-  - **Circularly shift coeffs:** Circularly shifts coeffs left if integer $k$ < 0, otherwise right if $k$ > 0.
-- **Root Operations:**
-  - **Rotate Roots:** Rotates all roots by $k$ degrees.
-- **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots.
+Any execution of the calculus, coefficient, or root operators triggers an automated pipeline: the engine instantly recalculates the modified polynomial, re-solves the new system via the numerical solver, and dynamically updates the visual topology on the complex plane.
+
+- **Primary Numerical Engines:**
+  - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value, leveraging an input-aware LRU cache to isolate execution boundaries and guarantee fluid, frame-rate-independent UI rendering.
+  - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical kernel.
+- **Calculus Operators:**
+  - **Differentiate:** Computes the analytical first derivative $\frac{dP}{dz}$.
+  - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
+  - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$, up to the maximum degree boundary.
+  - **Conjugate:** Computes the conjugate polynomial $P^*(z)$ by mapping all coefficients to their complex conjugates $\bar{c}_k$.
+- **Coefficient Mutators:**
+  - **Reverse Coefficients:** Reflects the coefficient sequence ($c_k \to c_{n-k}$), mapping non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$).
+  - **Circular Shift:** Executes a cyclic permutation of the coefficient array by an integer offset $k$ (left if $k < 0$, right if $k > 0$).
+- **Root Mutators:**
+  - **Rotate Roots:** Applies an isometric angular rotation to the extracted root set by a degree offset $\phi$.
+- **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots using an expansion-product pipeline.
 
 ### UX & Visualization Pipeline
 
