@@ -114,6 +114,7 @@ The settings panel provides fine-grained control over the underlying numerical e
 - **IEEE 754 Formatting Thresholds:** Define the upper ($maxThr$) and lower ($minThr$) decade limits that trigger the dynamic switch between standard fixed-point and scientific notation.
 - **Roots Cache:** Scale the internal LRU memory limits (1–8 cached inputs) to isolate UI performance in Number Mode.
 - **Root Clustering Tolerances:** Independently calibrate **Relative Tolerance** ($\epsilon_{\text{rel}}$) and **Absolute Tolerance** ($\epsilon_{\text{abs}}$) thresholds to tune the Union-Find cluster engine.
+- **Omit Leading Zeros when copying coeffs:** Strips inactive zero-padding ($c_{n+1} \dots c_N$) from the fixed-capacity memory buffer when copying coeffs to the clipboard, exporting a clean array mapped directly to the polynomial's active degree.
 - **File Directory Paths:** Specify the target output directory for your saved screen captures.
 
 ---
