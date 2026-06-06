@@ -28,7 +28,7 @@ Any execution of the calculus, coefficient, or root operators triggers an automa
   - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$, up to the maximum degree boundary.
   - **Conjugate:** Computes the conjugate polynomial $P^*(z)$ by mapping all coefficients to their complex conjugates $\bar{c}_k$.
 - **Coefficient Mutators:**
-  - **Reverse Coefficients:** Reflects the coefficient sequence ($c_k \to c_{n-k}$), mapping non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$).
+  - **Reverse Coefficients:** Reflects the fixed-capacity coefficient buffer ($c_k \to c_{N-k}$). This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$, where $n$ is the active degree of the polynomial.
   - **Circular Shift:** Executes a cyclic permutation of the coefficient array by an integer offset $k$ (left if $k < 0$, right if $k > 0$).
 - **Root Mutators:**
   - **Rotate Roots:** Applies an isometric angular rotation to the extracted root set by a degree offset $\phi$.
