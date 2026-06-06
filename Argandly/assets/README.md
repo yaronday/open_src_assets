@@ -15,15 +15,25 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 ## Key Features
 
-### Computational Engines
+### Computational Engines & State Transformations
 
-- **Scalable Root Extraction Engine:** Computes up to $N = 20$ roots on mobile, scaling up to $N = 100$ via compile-time desktop targets. Leverages an input-aware LRU cache to isolate execution and guarantee fluid, frame-rate-independent UI rendering.
-- **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical engine.
-- **Calculus Operators:**
-  - **Differentiate:** Computes the symbolic first derivative $\frac{dP}{dz}$.
-  - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ (assuming $C = 0$).
-  - **Power:** Computes $P^k(z)$ via algebraic expansion up to the maximum degree boundary.
-- **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots.
+Any execution of the calculus, coefficient, or root operators triggers an automated pipeline: the engine instantly recalculates the modified polynomial, re-solves the new system via the numerical solver, and dynamically updates the visual topology on the complex plane.
+
+- **Primary Numerical Engines:**
+  - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value, leveraging an input-aware LRU cache to isolate execution boundaries and guarantee fluid, frame-rate-independent UI rendering.
+  - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical kernel.
+- **Polynomial Operations:**
+  - **Differentiate:** Computes the analytical first derivative $\frac{dP}{dz}$.
+  - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
+  - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$, up to the maximum degree boundary.
+  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$ ($z^n P(1/z)$), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$) without injecting roots at the origin or altering the baseline degree.
+  - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates $\bar{c}_k$.
+- **Coeff Operations:**
+  - **Reverse Coefficients:** Reflects the fixed-capacity coefficient buffer ($c_k \to c_{N-k}$). This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$, where $n$ is the active degree of the polynomial.
+  - **Circular Shift:** Executes a cyclic permutation of the coefficient array by an integer offset $k$ (left if $k < 0$, right if $k > 0$).
+- **Root Operations:**
+  - **Rotate Roots:** Applies an isometric angular rotation to the extracted root set by a degree offset $\phi$.
+- **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots using an expansion-product pipeline.
 
 ### UX & Visualization Pipeline
 
@@ -104,6 +114,7 @@ The settings panel provides fine-grained control over the underlying numerical e
 - **IEEE 754 Formatting Thresholds:** Define the upper ($maxThr$) and lower ($minThr$) decade limits that trigger the dynamic switch between standard fixed-point and scientific notation.
 - **Roots Cache:** Scale the internal LRU memory limits (1–8 cached inputs) to isolate UI performance in Number Mode.
 - **Root Clustering Tolerances:** Independently calibrate **Relative Tolerance** ($\epsilon_{\text{rel}}$) and **Absolute Tolerance** ($\epsilon_{\text{abs}}$) thresholds to tune the Union-Find cluster engine.
+- **Omit Leading Zeros when copying coeffs:** Strips inactive zero-padding ($c_{n+1} \dots c_N$) from the fixed-capacity memory buffer when copying coeffs to the clipboard, exporting a clean array mapped directly to the polynomial's active degree.
 - **File Directory Paths:** Specify the target output directory for your saved screen captures.
 
 ---
