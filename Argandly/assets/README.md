@@ -26,7 +26,7 @@ Any execution of the calculus, coefficient, or root operators triggers an automa
   - **Differentiate:** Computes the analytical first derivative $\frac{dP}{dz}$.
   - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
   - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$, up to the maximum degree boundary.
-  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$ ($z^n P(1/z)$), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$) without injecting roots at the origin or altering the baseline degree.
+  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$ ($z^n$ P(1/z)), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$) without injecting roots at the origin or altering the baseline degree.
   - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates ${c}_k^*$.
 - **Coeff Operations:**
   - **Reverse Coefficients:** Reflects the fixed-capacity coefficient buffer ($c_k \to c_{N-k}$). This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$, where $n$ is the active degree of the polynomial.
