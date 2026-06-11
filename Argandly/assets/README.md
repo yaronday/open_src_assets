@@ -23,8 +23,8 @@ Any execution of the calculus, coefficient, or root operators triggers an automa
   - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value, leveraging an input-aware LRU cache to isolate execution boundaries and guarantee fluid, frame-rate-independent UI rendering.
   - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical kernel.
 - **Polynomial Operations:**
-  - **Differentiate:** Computes the analytical first derivative $\frac{dP}{dz}$.
-  - **Integrate:** Evaluates the indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
+  - **Differentiate:** Computes k-th order derivative $\frac{dP}{dz}$.
+  - **Integrate:** Computes k-th order indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
   - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$, up to the maximum degree boundary.
   - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$ ($z^n$ P(1/z)), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$) without injecting roots at the origin or altering the baseline degree.
   - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates ${c}_k^*$.
