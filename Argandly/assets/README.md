@@ -1,6 +1,6 @@
 # Argandly — Complex Roots Visualizer
 
-A high-performance, cross-platform Flutter application tailored for students and professionals to compute, analyze, and visualize the $n$-th roots of complex numbers and the roots of univariate complex polynomials within the complex plane.
+A high-performance, cross-platform Flutter application designed for students and professionals to compute, analyze, and visualize $n$-th roots of complex numbers and roots  of univariate complex polynomials within the complex plane.
 
 ---
 
