@@ -1,6 +1,6 @@
 # Argandly — Complex Roots Visualizer
 
-A high-performance, cross-platform Flutter application designed for students and professionals to compute, analyze, and visualize roots of univariate complex polynomials in the   complex plane.
+A high-performance, cross-platform Flutter application designed for students and professionals to compute, analyze, and visualize roots of univariate complex polynomials in the complex plane.
 
 ---
 
@@ -10,6 +10,16 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 1. **Number Mode**: Evaluates an arbitrary complex number $z \in \mathbb{C}$ to find its $n$-th roots, mapping their symmetric distribution along an origin-centered circumscribed circle.
 2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
+
+---
+
+## Download & Availability
+
+| Platform        | Store                                                                                                                                                                                          | Status                                                            |
+| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
+| **Windows**     | [![Get it from Microsoft Store](https://img.shields.io/badge/Microsoft_Store-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://apps.microsoft.com/store/detail/9nmp5b55whgx) | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx) |
+| **Android**     | [![Google Play Closed Testing](https://img.shields.io/badge/Google_Play-Closed_Testing-E37400?style=for-the-badge&logo=google-play&logoColor=white)](google_play_closed_testing.md)            | [Join Closed Testing](google_play_closed_testing.md)              |
+| **iOS / macOS** | [![App Store Coming Soon](https://img.shields.io/badge/App_Store-Coming_Soon-grey?style=for-the-badge&logo=apple&logoColor=white)](#)                                                          | _Coming Soon_                                                     |
 
 ---
 
