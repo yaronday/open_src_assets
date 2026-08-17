@@ -15,11 +15,11 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 ## Download & Availability
 
-| Platform        | Store                                                                                                                                                                                          | Status                                                            |
-| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------- |
-| **Windows**     | [![Get it from Microsoft Store](https://img.shields.io/badge/Microsoft_Store-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://apps.microsoft.com/store/detail/9nmp5b55whgx) | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx) |
-| **Android**     | [![Google Play Closed Testing](https://img.shields.io/badge/Google_Play-Closed_Testing-E37400?style=for-the-badge&logo=google-play&logoColor=white)](google_play_closed_testing.md)            | [Join Closed Testing](google_play_closed_testing.md)              |
-| **iOS / macOS** | [![App Store Coming Soon](https://img.shields.io/badge/App_Store-Coming_Soon-grey?style=for-the-badge&logo=apple&logoColor=white)](#)                                                          | _Coming Soon_                                                     |
+| Platform        | Store                                                                                                                                                                                          | Status                                                                  |
+| :-------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------- |
+| **Windows**     | [![Get it from Microsoft Store](https://img.shields.io/badge/Microsoft_Store-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://apps.microsoft.com/store/detail/9nmp5b55whgx) | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx)       |
+| **Android**     | [![Google Play Closed Testing](https://img.shields.io/badge/Google_Play-Closed_Testing-E37400?style=for-the-badge&logo=google-play&logoColor=white)](google_play_closed_testing.md)            | [Join Closed Testing](google_play_closed_testing.md)                    |
+| **iOS / macOS** | [![App Store Coming Soon](https://img.shields.io/badge/App_Store-Coming_Soon-E37400?style=for-the-badge&logo=apple&logoColor=white)](#)                                                        | _[App Store - Test Flight](https://testflight.apple.com/join/X6YuM5x1)_ |
 
 ---
 
