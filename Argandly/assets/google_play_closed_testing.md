@@ -14,7 +14,9 @@ Argandly is currently in closed testing for Android on Google Play. To participa
 
 - [**Microsoft Store**](https://apps.microsoft.com/store/detail/9nmp5b55whgx)
 
-- [App Store - Test Flight](https://testflight.apple.com/join/X6YuM5x1)
+- [**App Store for Mac**](https://apps.apple.com/us/app/argandly/id6799437915?mt=12)
+
+- [App Store (iOS) - Test Flight](https://testflight.apple.com/join/X6YuM5x1)
 
 ## Feedback & Bug Reports
 
