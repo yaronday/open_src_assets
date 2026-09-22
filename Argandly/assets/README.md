@@ -14,14 +14,12 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 ---
 
 ## Download & Availability
-
-| Platform    | Store Badge                                                                                                                                                                                     | Status / Action                                                        |
-| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
-| **Windows** | [![Get it from Microsoft Store](https://img.shields.io/badge/Microsoft_Store-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://apps.microsoft.com/store/detail/9nmp5b55whgx)  | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx)      |
-| **macOS**   | [![Download on the Mac App Store](https://img.shields.io/badge/Mac_App_Store-000000?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
-| **Android** | [![Google Play](https://img.shields.io/badge/Google_Play-4285F4?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) | [Available](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) |
-| **iOS**     | [![App Store Coming Soon](https://img.shields.io/badge/App_Store-Coming_Soon-555555?style=for-the-badge&logo=apple&logoColor=white)](#)                                                         | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1)          |
-
+| Platform    | Status                                                        |
+| :---------- | :--------------------------------------------------------------------- |
+| **Windows** | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx)      |
+| **macOS**   | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
+| **Android** | [Available](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) |
+| **iOS**     | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1)         |
 ---
 
 ## Key Features
