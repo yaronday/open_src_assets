@@ -14,19 +14,19 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 ---
 
 ## Download & Availability
-| Platform    | Status                                                        |
-| :---------- | :--------------------------------------------------------------------- |
-| **Windows** | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx)      |
-| **macOS**   | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
+| Platform | Status |
+| :--- | :--- |
+| **Windows** | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx) |
+| **macOS** | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
 | **Android** | [Available](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) |
-| **iOS**     | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1)         |
+| **iOS** | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1) |
 ---
 
 ## Key Features
 
 ### Computational Engines & State Transformations
 
-Any execution of the calculus, coefficient, or root operators triggers an automated pipeline: the engine instantly recalculates the modified polynomial, re-solves the new system via the numerical solver, and dynamically updates the visual topology on the complex plane.
+Any execution of the calculus, coefficient, or root operators triggers an automated pipeline: the engine instantly recalculates the modified polynomial, resolves the new system via the numerical solver, and dynamically updates the visual topology on the complex plane.
 
 - **Primary Numerical Engines:**
   - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value, leveraging an input-aware LRU cache to isolate execution boundaries and guarantee fluid, frame-rate-independent UI rendering.
