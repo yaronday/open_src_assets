@@ -13,8 +13,7 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 n-th roots, mapping their symmetric distribution along an origin-centered circumscribed circle.  
 
 2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials  
-$P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation  
-(differentiation, integration, and exponentiation).
+$P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
 
 ---
 
@@ -37,8 +36,7 @@ numerical solver, and dynamically updates the visual topology on the complex pla
 
 - **Primary Numerical Engines:**
   - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value,  
-  leveraging an input-aware LRU cache to isolate execution boundaries and guarantee smooth,  
-  frame-rate-independent UI rendering.
+  leveraging an input-aware LRU cache to isolate execution boundaries and guarantee smooth, frame-rate-independent UI rendering.
   - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated,  
   sequential Aberth-Ehrlich numerical kernel.
 - **Polynomial Operations:**
