@@ -1,25 +1,36 @@
 ## Appendix A: Root Clusterer
 
-When analyzing complex polynomials, structural challenges arise due to **numerical multiplicity clustering** and **visual flickering during coefficient mutations**. Argandly solves these issues through a specialized post-processing pipeline.
+When analyzing complex polynomials, structural challenges arise due to **numerical multiplicity clustering** and **visual flickering during coefficient mutations**.  
+Argandly solves these issues through a specialized post-processing pipeline.
 
 ### 1. Root Clustering Engine
 
-High-multiplicity roots computed via numerical solvers like Aberth-Ehrlich often scatter into micro-clusters of distinct points due to floating-point limitations and rounding errors.  
-To present clean algebraic roots to researchers, Argandly passes raw roots through an agglomerative spatial clustering pipeline implemented via an optimized **Union-Find (UF)** algorithm featuring path compression and union-by-rank.
+High-multiplicity roots computed via numerical solvers like Aberth-Ehrlich, often scatter into micro-clusters of distinct points,  
+due to floating-point limitations and rounding errors.  
+To present clean algebraic roots to researchers, Argandly passes raw roots through an agglomerative spatial clustering pipeline,  
+implemented via an optimized **Union-Find (UF)** algorithm featuring path compression and union-by-rank.
 
-- **Mathematical Condition**: An edge is established between two discrete root approximations $z_1$ and $z_2$ if they satisfy an adaptive, non-accumulative dual-tolerance proximity condition:
+- **Mathematical Condition**: An edge is established between two discrete root approximations $z_1$ and $z_2$,  
+if they satisfy an adaptive, non-accumulative dual-tolerance proximity condition:
 
 $$
 \Vert z_1 - z_2 \Vert \le \max\left(\epsilon_{\text{abs}}, \epsilon_{\text{rel}} \max\left(|z_1|, |z_2|\right)\right)
 $$
 
-- **Absolute Tolerance ($\epsilon_{\text{abs}}$)**: Stabilizes micro-scale root isolation near the origin ($|z| \to 0$), acting as a hard floor against machine-epsilon noise where relative scaling vanishes.
-- **Relative Tolerance ($\epsilon_{\text{rel}}$)**: Dynamically scales to handle high-magnitude, volatile root clusters (e.g., ill-conditioned systems like the **Wilkinson Catastrophe**). This matches the proximity window proportionally to the macro-scale boundary of the roots, preventing chaotic splitting caused by floating-point coefficient roundoff.
+- **Absolute Tolerance ($\epsilon_{\text{abs}}$)**: Stabilizes micro-scale root isolation near the origin ($|z| \to 0$),  
+acting as a hard floor against machine-epsilon noise where relative scaling vanishes.
+- **Relative Tolerance ($\epsilon_{\text{rel}}$)**: Dynamically scales to handle high-magnitude, volatile root clusters  
+(e.g., ill-conditioned systems like the **Wilkinson Catastrophe**).  
+This matches the proximity window proportionally to the macro-scale boundary of the roots, preventing chaotic splitting,  
+caused by floating-point coefficient roundoff.
 
-- **UF Transitive Aggregation**: By executing a Disjoint-Set Union model, the system guarantees a complete **Transitive Closure**. If root $A$ clusters with root $B$, and root $B$ clusters with root $C$, the algorithm safely collapses all three elements into a shared topological set. This robustly handles high-degree algebraic multiplicities (such as $(z-1)^{10}$) where micro-roots form a continuous chain.
+- **UF Transitive Aggregation**: By executing a Disjoint-Set Union model, the system guarantees a complete **Transitive Closure**.  
+If root $A$ clusters with root $B$, and root $B$ clusters with root $C$,  
+the algorithm safely collapses all three elements into a shared topological set.  
+This robustly handles high-degree algebraic multiplicities (such as $(z-1)^{10}$), where micro-roots form a continuous chain.
 
 - **Online Centroid Tracking**: To maximize arithmetic accuracy and avoid late-pass iteration overhead, the cluster engine maintains running real and imaginary coordinate metrics directly during the component `unite` step.  
-   Once sets are finalized, the definitive cluster coordinates are resolved directly via their true algebraic center of mass:
+Once sets are finalized, the definitive cluster coordinates are resolved directly via their true algebraic center of mass:
 
 $$
 z_{\text{cluster}} = \frac{\sum_{m=1}^{M} \text{Re}(\omega_m) + i \sum_{m=1}^{M} \text{Im}(\omega_m)}{M} \quad \text{(where } M = \text{set size / multiplicity)}
@@ -31,7 +42,8 @@ $$
 
 #### Case A: Absolute Tolerance ($\epsilon_{\text{abs}}$) and Micro-Scale Root Isolation
 
-When a system contains roots scaled across multiple orders of magnitude (from macro-scale to micro-scale), an oversized $\epsilon_{\text{abs}}$ can prematurely collapse true micro-scale roots into a single false degenerate root at the origin.
+When a system contains roots scaled across multiple orders of magnitude (from macro-scale to micro-scale),  
+an oversized $\epsilon_{\text{abs}}$ can prematurely collapse true micro-scale roots into a single, false, degenerate root at the origin.
 
 - **Target Test Roots**: $\pm 10^{-10}i,\ \pm 100i,\ \pm 10^{4}i$
 - **Expanded Characteristic Equation**:
@@ -42,7 +54,8 @@ $$
 
 ##### Scenario 1: Oversized Floor ($\epsilon_{\text{abs}} = 2.6\times10^{-8},\ \epsilon_{\text{rel}} = 3.2\times10^{-3}$)
 
-Because the true micro-roots ($|\pm 10^{-10}i|$) fall well within the absolute threshold floor ($\epsilon_{\text{abs}}$), the UF algorithm groups them into a single connected component and calculates their center of mass at the origin.
+Because the true micro-roots ($|\pm 10^{-10}i|$) fall well within the absolute threshold floor ($\epsilon_{\text{abs}}$),  
+the UF algorithm groups them into a single, connected component, and calculates their center of mass at the origin.
 
 ```text
 ω₁: -1.6314e-51 + 0.0000j (x2)  <-- Micro-roots prematurely collapsed
@@ -99,10 +112,10 @@ Product: 1.0516 - 0.0344j
 
 Increasing the relative threshold allows the UF algorithm to evaluate the local root variations  
 relative to their macro position ($\approx 1.0$). The engine dynamically expands the grouping threshold,  
-resolving the scattered points back into a single definitive center of mass with its correct multiplicity.
+resolving the scattered points back into a single, definitive center of mass with its correct multiplicity.
 
 ```text
-ω₁:  1.0050 - 0.0032j (x10)     <-- Consolidated root displaying true multiplicity
+ω₁:  1.0050 - 0.0032j (x10)     <-- Consolidated root, displaying true multiplicity
 Sum: 10.0496 - 0.0324j
 Product: 1.0502 - 0.0339j
 ```

@@ -1,6 +1,7 @@
 # Argandly — Complex Roots Visualizer
 
-A high-performance, cross-platform Flutter application designed for students and professionals to compute, analyze, and visualize roots of univariate complex polynomials in the complex plane.
+A high-performance, cross-platform Flutter application designed for students and professionals to compute,  
+analyze, and visualize roots of univariate complex polynomials in the complex plane.
 
 ---
 
@@ -8,48 +9,63 @@ A high-performance, cross-platform Flutter application designed for students and
 
 Argandly bridges pure numerical computation with interactive geometric analysis through two primary operational engines:
 
-1. **Number Mode**: Evaluates an arbitrary complex number $z \in \mathbb{C}$ to find its $n$-th roots, mapping their symmetric distribution along an origin-centered circumscribed circle.
-2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
+1. **Number Mode**: Evaluates an arbitrary complex number $z \in \mathbb{C}$ to find its  
+n-th roots, mapping their symmetric distribution along an origin-centered circumscribed circle.  
+
+2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials  
+$P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation  
+(differentiation, integration, and exponentiation).
 
 ---
 
 ## Download & Availability
-
-| Platform    | Store Badge                                                                                                                                                                                     | Status / Action                                                        |
-| :---------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :--------------------------------------------------------------------- |
-| **Windows** | [![Get it from Microsoft Store](https://img.shields.io/badge/Microsoft_Store-0078D4?style=for-the-badge&logo=microsoft&logoColor=white)](https://apps.microsoft.com/store/detail/9nmp5b55whgx)  | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx)      |
-| **macOS**   | [![Download on the Mac App Store](https://img.shields.io/badge/Mac_App_Store-000000?style=for-the-badge&logo=apple&logoColor=white)](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
-| **Android** | [![Google Play](https://img.shields.io/badge/Google_Play-4285F4?style=for-the-badge&logo=google-play&logoColor=white)](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) | [Available](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) |
-| **iOS**     | [![App Store Coming Soon](https://img.shields.io/badge/App_Store-Coming_Soon-555555?style=for-the-badge&logo=apple&logoColor=white)](#)                                                         | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1)          |
-
+| Platform | Status |
+| :--- | :--- |
+| **Windows** | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx) |
+| **macOS** | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
+| **Android** | [Available](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) |
+| **iOS** | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1) |
 ---
 
 ## Key Features
 
 ### Computational Engines & State Transformations
 
-Any execution of the calculus, coefficient, or root operators triggers an automated pipeline: the engine instantly recalculates the modified polynomial, re-solves the new system via the numerical solver, and dynamically updates the visual topology on the complex plane.
+Any execution of the calculus, coefficient, or root operators triggers an automated pipeline:  
+the engine instantly recalculates the modified polynomial, resolves the new system via the  
+numerical solver, and dynamically updates the visual topology on the complex plane.
 
 - **Primary Numerical Engines:**
-  - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value, leveraging an input-aware LRU cache to isolate execution boundaries and guarantee fluid, frame-rate-independent UI rendering.
-  - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated, sequential Aberth-Ehrlich numerical kernel.
+  - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value,  
+  leveraging an input-aware LRU cache to isolate execution boundaries and guarantee smooth,  
+  frame-rate-independent UI rendering.
+  - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated,  
+  sequential Aberth-Ehrlich numerical kernel.
 - **Polynomial Operations:**
   - **Differentiate:** Computes k-th order derivative $\frac{dP}{dz}$.
   - **Integrate:** Computes k-th order indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
-  - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$, up to the maximum degree boundary.
-  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$ ($z^n$ P(1/z)), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$) without injecting roots at the origin or altering the baseline degree.
+  - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$,  
+  up to the maximum degree boundary.
+  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$    
+  ($z^n$ P(1/z)), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$),  
+  without injecting roots at the origin or altering the baseline degree.
   - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates ${c}_k^*$.
 - **Coeff Operations:**
-  - **Reverse Coefficients:** Reflects the fixed-capacity coefficient buffer ($c_k \to c_{N-k}$). This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$, where $n$ is the active degree of the polynomial.
-  - **Circular Shift:** Executes a cyclic permutation of the coefficient array by an integer offset $k$ (left if $k < 0$, right if $k > 0$).
+  - **Reverse Coefficients:** Reflects the fixed-capacity coefficient buffer ($c_k \to c_{N-k}$).  
+  This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$,  
+  where $n$ is the active degree of the polynomial.
+  - **Circular Shift:** Executes a cyclic permutation of the coefficient array by an integer offset k (left for negative k).
 - **Root Operations:**
   - **Rotate Roots:** Applies an isometric angular rotation to the extracted root set by a degree offset $\phi$.
 - **Bi-Directional Synthesis:** Synthesizes polynomial coefficients dynamically from an arbitrary set of user-defined roots using an expansion-product pipeline.
 
 ### UX & Visualization Pipeline
 
-- **Dynamic Complex Plane**: Interactive Argand diagram, supporting responsive layouts, system-aware dark/light theming, custom decimal precision (0–16 significant digits), and localized $\omega$-subscript indexing.
-- **Expression-Parsed Data Loader**: Evaluates vectorized text inputs using a custom shorthand parser that supports MATLAB-style array constructor parsing and replication factor parsing (e.g., [1 x10, 2-j x5]), enabling implicit array generation and rapid multiplicity declarations.
+- **Dynamic Complex Plane**: Interactive Argand diagram, supporting responsive layouts, system-aware dark/light theming,  
+custom decimal precision (0–16 significant digits), and localized $\omega$-subscript indexing.
+- **Expression-Parsed Data Loader**: Evaluates vectorized text inputs using a custom shorthand parser,  
+that supports MATLAB-style array constructor parsing and replication factor parsing (e.g., [1 x10, 2-j x5]),  
+enabling implicit array generation and rapid multiplicity declarations.
 
 - **Media & Data Persistence**: One-touch clipboard serialization, structured text exports, and disk-persisted global application state across sessions.
 
@@ -61,7 +77,8 @@ Any execution of the calculus, coefficient, or root operators triggers an automa
 
 Designed for analyzing the geometric properties of roots of unity and general complex scalars.
 
-1. **Input Specification:** Enter target inputs into the complex text field using standard or scientific notations (`a+bj`, `a-bj`, or engineering exponents like `2.7e3j - 1.5e2`).
+1. **Input Specification:** Enter target inputs into the complex text field using standard or scientific notations (`a+bj`, `a-bj`,  
+or engineering exponents like `2.7e3j - 1.5e2`).
 2. **Order Adjustment:** Slide or increment the root order $n \in [1, N]$. The interface instantly binds the precomputed vector array.
 3. **Output Extraction:** Read Cartesian coordinates or Polar metrics (magnitude $r$, phase $\theta$) directly from the synchronized tabular view below the canvas.
 
@@ -71,7 +88,8 @@ Designed for analyzing the geometric properties of roots of unity and general co
 
 Toggle the **Polynomial Editor** to modify the system state using two discrete ingestion modes:
 
-- **Coefficient Ingestion:** Fields map sequentially from the highest degree $z^N$ down to the constant $z^0$. Unfilled trailing fields are automatically zero-padded up to the $N+1$ limit.
+- **Coefficient Ingestion:** Fields map sequentially from the highest degree $z^N$ down to the constant $z^0$.  
+Unfilled trailing fields are automatically zero-padded up to the $N+1$ limit.
 - **Root Ingestion:** Accepts up to $N$ discrete roots to reconstruct an expanded polynomial form.
 
 #### Input Syntax & Vector Expansion Shortcuts
@@ -86,7 +104,8 @@ It supports bracketed arrays `[...]` and newline-delimited lists, with shorthand
 
 #### Handling of Degenerate and Trivial Boundary Cases
 
-When the polynomial editing phase completes, Argandly evaluates the characteristic equation $P(z) = 0$. The solver handles algebraic boundary conditions through deterministic fallback states:
+When the polynomial editing phase completes, Argandly evaluates the characteristic equation $P(z) = 0$.  
+The solver handles algebraic boundary conditions through deterministic fallback states:
 
 1. **The Null Polynomial (Empty Coefficient Array)**:  
    If no coefficients are provided, the system evaluates the trivial identity:
@@ -95,7 +114,8 @@ When the polynomial editing phase completes, Argandly evaluates the characterist
 2. **The Non-Zero Constant Polynomial (No Roots)**:
    If all degrees are zero or empty except for a non-zero constant term (e.g., $c_n = 5)$, the system evaluates the inconsistent equation:
    $$P(z) = 5 = 0$$
-   Since no value of $z$ can satisfy this condition, the engine successfully returns an empty root set ($\emptyset$). The Argand diagram will display an empty plane with reference axes and zero root markers.
+   Since no value of $z$ can satisfy this condition, the engine successfully returns an empty root set ($\emptyset$).  
+   The Argand diagram will display an empty plane with reference axes and zero root markers.
 
 ---
 
