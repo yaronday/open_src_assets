@@ -1,0 +1,27 @@
+SOFTWARE LICENSE AGREEMENT
+
+Copyright © 2026 Yaron Dayan. All rights reserved.
+
+1. PROPRIETARY RIGHTS
+This software, including all source code, assets, graphics, and documentation, 
+is the sole property of YARON DAYAN. 
+
+2. LICENSE GRANT
+Permission is hereby granted to download and install this software for 
+personal, non-commercial use only. 
+
+3. RESTRICTIONS
+You may NOT:
+   a) Modify, decompile, or reverse-engineer this software.
+   b) Redistribute, sub-license, or sell this software in any form.
+   c) Use the source code for any commercial purpose without prior 
+      written consent from the copyright holder.
+
+4. NO WARRANTY
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
