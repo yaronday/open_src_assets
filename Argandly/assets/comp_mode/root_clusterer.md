@@ -80,7 +80,7 @@ $$z^{10} - 10z^9 + 45z^8 - 120z^7 + 210z^6 - 252z^5 + 210z^4 - 120z^3 + 45z^2 - 
 ##### Scenario 1: Strict Relative Bounds $(\epsilon_{\text{rel}} < 7.0\times10^{-3})$
 
 Due to natural floating-point roundoff errors during polynomial expansion and solver evaluation,  
-the single root at $1.0$ shatters into a ring of $10$ distinct micro-variations.
+the single root at 1.0 shatters into a ring of 10 distinct micro-variations.
 
 ```text
 ω₁ :  1.0473 + 0.0048j         ω₆ :  0.9918 - 0.0537j
