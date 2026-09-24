@@ -9,8 +9,7 @@ analyze, and visualize roots of univariate complex polynomials in the complex pl
 
 Argandly bridges pure numerical computation with interactive geometric analysis through two primary operational engines:
 
-1. **Number Mode**: Evaluates an arbitrary complex number $z \in \mathbb{C}$ to find its  
-n-th roots, mapping their symmetric distribution along an origin-centered circumscribed circle.  
+1. **Number Mode**: Computes the n-th roots of an arbitrary complex number $z \in \mathbb{C}$, which are distributed with n-fold symmetry along an origin-centered reference circle.
 
 2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials  
 $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
