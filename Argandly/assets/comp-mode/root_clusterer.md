@@ -19,7 +19,7 @@ $$
 - **UF Transitive Aggregation**: By executing a Disjoint-Set Union model, the system guarantees a complete **Transitive Closure**. If root $A$ clusters with root $B$, and root $B$ clusters with root $C$, the algorithm safely collapses all three elements into a shared topological set. This robustly handles high-degree algebraic multiplicities, such as $(z-1)^{10}$, where micro-roots form a continuous chain.
 
 - **Online Centroid Tracking**: To maximize arithmetic accuracy and avoid late-pass iteration overhead, the cluster engine maintains running real and imaginary coordinate metrics directly during the component `unite` step.  
-   Once sets are finalized, the definitive cluster coordinates are resolved directly via their true algebraic center of mass:
+   Once sets are finalized, the definitive cluster coordinates are resolved directly via their centroid:
 
 $$
 z_{\text{cluster}} = \frac{\sum_{m=1}^{M} \text{Re}(\omega_m) + i \sum_{m=1}^{M} \text{Im}(\omega_m)}{M} \quad \text{(where } M = \text{set size / multiplicity)}
