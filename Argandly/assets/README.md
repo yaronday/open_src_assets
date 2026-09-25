@@ -16,13 +16,10 @@ $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-t
 
 ---
 
-## Download & Availability
-| Platform | Status |
-| :--- | :--- |
-| **Windows** | [Available](https://apps.microsoft.com/store/detail/9nmp5b55whgx) |
-| **macOS** | [Available](https://apps.apple.com/us/app/argandly/id6799437915?mt=12) |
-| **Android** | [Available](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share) |
-| **iOS** | [TestFlight Beta](https://testflight.apple.com/join/X6YuM5x1) |
+## Platform availability
+
+**[Windows](https://apps.microsoft.com/store/detail/9nmp5b55whgx?utm_source=gemini)** | **[macOS](https://apps.apple.com/us/app/argandly/id6799437915?mt=12&utm_source=gemini)** | **[Android](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share&utm_source=gemini)** | **[iOS(TestFlight)](https://testflight.apple.com/join/X6YuM5x1?utm_source=gemini)**
+
 ---
 
 ## Key Features
@@ -58,8 +55,8 @@ numerical solver, and dynamically updates the visual topology on the complex pla
 
 ### UX & Visualization Pipeline
 
-- **Dynamic Complex Plane**: Interactive Argand diagram, supporting responsive layouts, system-aware dark/light theming,  
-custom decimal precision (0–16 significant digits), and localized $\omega$-subscript indexing.
+- **Dynamic Complex Plane**: Interactive Argand diagram with pan & zoom controls, supporting responsive layouts, system-aware dark/light theming, custom decimal precision (0–16 significant digits), and $\omega_k$ indexing.
+
 - **Expression-Parsed Data Loader**: Evaluates vectorized text inputs using a custom shorthand parser,  
 that supports MATLAB-style array constructor parsing and replication factor parsing (e.g., [1 x10, 2-j x5]),  
 enabling implicit array generation and rapid multiplicity declarations.
