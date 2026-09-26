@@ -12,7 +12,7 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 1. **Number Mode**: Computes the n-th roots of an arbitrary complex number $z \in \mathbb{C}$, which are distributed with n-fold symmetry along an origin-centered reference circle.
 
 2. **Polynomial Mode**: Solves for the complex roots of univariate polynomials  
-$P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
+   $P(z) = \sum_{k=0}^{n} c_k z^{n-k}$ where $c_k \in \mathbb{C}$, featuring real-time algebraic manipulation (differentiation, integration, and exponentiation).
 
 ---
 
@@ -32,22 +32,22 @@ numerical solver, and dynamically updates the visual topology on the complex pla
 
 - **Primary Numerical Engines:**
   - **Scalable Root Extraction Engine:** Computes up to $N = 100$ roots per complex value,  
-  leveraging an input-aware LRU cache to isolate execution boundaries and guarantee smooth, frame-rate-independent UI rendering.
+    leveraging an input-aware LRU cache to isolate execution boundaries and guarantee smooth, frame-rate-independent UI rendering.
   - **High-Degree Polynomial Solver:** Locates roots for complex polynomials up to degree $N$ using an accelerated,  
-  sequential Aberth-Ehrlich numerical kernel.
+    sequential Aberth-Ehrlich numerical kernel.
 - **Polynomial Operations:**
   - **Differentiate:** Computes k-th order derivative $\frac{dP}{dz}$.
   - **Integrate:** Computes k-th order indefinite integral $\int P(z)dz$ under the boundary condition $C = 0$.
   - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$,  
-  up to the maximum degree boundary.
-  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$    
-  ($z^nP(1/z)$), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$),  
-  without injecting roots at the origin or altering the baseline degree.
+    up to the maximum degree boundary.
+  - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$  
+    ($z^n P\left(\frac{1}{z}\right)$), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$),  
+    without injecting roots at the origin or altering the baseline degree.
   - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates ${c}_k^*$.
 - **Coeff Operations:**
   - **Reverse Coefficients:** Reflects the fixed-capacity coefficient buffer ($c_k \to c_{N-k}$).  
-  This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$,  
-  where $n$ is the active degree of the polynomial.
+    This operation maps non-zero roots to their multiplicative inverses ($z \to \frac{1}{z}$) scaled by a factor of $z^{N-n}$,  
+    where $n$ is the active degree of the polynomial.
   - **Circular Shift:** Executes a cyclic permutation of the coefficient array by an integer offset k (left for negative k).
 - **Root Operations:**
   - **Rotate Roots:** Applies an isometric angular rotation to the extracted root set by a degree offset $\phi$.
@@ -58,8 +58,8 @@ numerical solver, and dynamically updates the visual topology on the complex pla
 - **Dynamic Complex Plane**: Interactive Argand diagram with pan & zoom controls, supporting responsive layouts, system-aware dark/light theming, custom decimal precision (0–16 significant digits), and $\omega_k$ indexing.
 
 - **Expression-Parsed Data Loader**: Evaluates vectorized text inputs using a custom shorthand parser,  
-that supports MATLAB-style array constructor parsing and replication factor parsing (e.g., [1 x10, 2-j x5]),  
-enabling implicit array generation and rapid multiplicity declarations.
+  that supports MATLAB-style array constructor parsing and replication factor parsing (e.g., [1 x10, 2-j x5]),  
+  enabling implicit array generation and rapid multiplicity declarations.
 
 - **Media & Data Persistence**: One-touch clipboard serialization, structured text exports, and disk-persisted global application state across sessions.
 
@@ -72,7 +72,7 @@ enabling implicit array generation and rapid multiplicity declarations.
 Designed for analyzing the geometric properties of roots of unity and general complex scalars.
 
 1. **Input Specification:** Enter target inputs into the complex text field using standard or scientific notations (`a+bj`, `a-bj`,  
-or engineering exponents like `2.7e3j - 1.5e2`).
+   or engineering exponents like `2.7e3j - 1.5e2`).
 2. **Order Adjustment:** Slide or increment the root order $n \in [1, N]$. The interface instantly binds the precomputed vector array.
 3. **Output Extraction:** Read Cartesian coordinates or Polar metrics (magnitude $r$, phase $\theta$) directly from the synchronized tabular view below the canvas.
 
@@ -83,7 +83,7 @@ or engineering exponents like `2.7e3j - 1.5e2`).
 Toggle the **Polynomial Editor** to modify the system state using two discrete ingestion modes:
 
 - **Coefficient Ingestion:** Fields map sequentially from the highest degree $z^N$ down to the constant $z^0$.  
-Unfilled trailing fields are automatically zero-padded up to the $N+1$ limit.
+  Unfilled trailing fields are automatically zero-padded up to the $N+1$ limit.
 - **Root Ingestion:** Accepts up to $N$ discrete roots to reconstruct an expanded polynomial form.
 
 #### Input Syntax & Vector Expansion Shortcuts
