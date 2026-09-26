@@ -37,11 +37,11 @@ numerical solver, and dynamically updates the visual topology on the complex pla
   sequential Aberth-Ehrlich numerical kernel.
 - **Polynomial Operations:**
   - **Differentiate:** Computes k-th order derivative $\frac{dP}{dz}$.
-  - **Integrate:** Computes k-th order indefinite integral $\int P(z)\,dz$ under the boundary condition $C = 0$.
+  - **Integrate:** Computes k-th order indefinite integral $\int P(z)dz$ under the boundary condition $C = 0$.
   - **Power:** Computes the algebraic expansion of the polynomial raised to an integer power, $P(z)^k$,  
   up to the maximum degree boundary.
   - **Reciprocal Polynomial:** Executes a textbook algebraic reversal on the active polynomial of degree $n$    
-  ($z^n$ P(1/z)), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$),  
+  ($z^nP(1/z)$), mapping non-zero roots cleanly to their geometric reciprocals ($z \to \frac{1}{z}$),  
   without injecting roots at the origin or altering the baseline degree.
   - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates ${c}_k^*$.
 - **Coeff Operations:**
