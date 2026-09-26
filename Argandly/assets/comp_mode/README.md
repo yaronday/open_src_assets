@@ -44,7 +44,7 @@ numerical solver, and dynamically updates the visual topology on the complex pla
   - **Integrate:** Computes k-th order $\int P(z)dz$ under the boundary condition C = 0.
   - **Power:** Computes the algebraic expansion of $P(z)^k$ up to the maximum degree boundary.
   - **Reciprocal Polynomial:** Executes an algebraic reversal on the active polynomial of degree n  
-    ($z^n$ $P(\frac{1}{z})$), mapping non-zero roots cleanly to their geometric reciprocals z->1/z,  
+    ($z^n$ P($\frac{1}{z}$)), mapping non-zero roots cleanly to their geometric reciprocals z->1/z,  
     without injecting roots at the origin or altering the baseline degree.
   - **Conjugate:** Computes the conjugate polynomial by mapping all coefficients to their complex conjugates ${c}_k^*$.
 - **Coeff Operations:**
