@@ -18,7 +18,7 @@ Argandly bridges pure numerical computation with interactive geometric analysis 
 
 ## Platform availability
 
-**[Windows](https://apps.microsoft.com/store/detail/9nmp5b55whgx?utm_source=gemini)** | **[macOS](https://apps.apple.com/us/app/argandly/id6799437915?mt=12&utm_source=gemini)** | **[Android](https://play.google.com/store/apps/details?id=com.yarondayan.argandly&pcampaignid=web_share&utm_source=gemini)** | **[iOS(TestFlight)](https://testflight.apple.com/join/X6YuM5x1?utm_source=gemini)**
+**[Windows](https://apps.microsoft.com/detail/9nmp5b55whgx)** | **[macOS](https://apps.apple.com/us/app/argandly/id6799437915)** | **[Android](play.google.com/store/apps/details?id=com.yarondayan.argandly)** | **[iOS](https://apps.apple.com/us/app/argandly/id6799437915)**
 
 ---
 
